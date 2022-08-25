@@ -6,7 +6,7 @@ namespace DefaultNamespace
 {
     public class ColliderProxy : MonoBehaviour, ICollider
     {
-        public float ContactOffset = 0.05f;
+        public float ContactOffset = 0.005f;
 
 
         private Rigidbody m_Rigidbody;

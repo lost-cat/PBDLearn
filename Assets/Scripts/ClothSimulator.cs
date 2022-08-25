@@ -49,7 +49,7 @@ namespace DefaultNamespace
         public int VertexCount => m_Modifier.Vertices.Length;
         public NativeArray<float3> Positions => m_Modifier.Vertices;
         public NativeArray<float3> Normals => m_Modifier.Normals;
-        public int DistanceCostraintsCount => m_DistanceConstraints.Length;
+        public int DistanceConstraintsCount => m_DistanceConstraints.Length;
 
         private JobHandle m_JobHandle;
 
@@ -73,6 +73,7 @@ namespace DefaultNamespace
         {
             foreach (var forceApply in m_RigidbodyForceApplies)
             {
+                Debug.Log($"Force Apply: {forceApply}");
                 m_ColliderProxies[forceApply.EntityId].AttachBody
                     .AddForce(forceApply.Velocity, ForceMode.VelocityChange);
             }

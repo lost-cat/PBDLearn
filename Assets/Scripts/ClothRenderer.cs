@@ -102,7 +102,7 @@ public class ClothRenderer : MonoBehaviour
                 foreach(var p in m_Simulator.Positions){
                     Gizmos.DrawSphere(p,0.05f);
                 }
-                for(var i = 0; i < m_Simulator.DistanceCostraintsCount;i ++){
+                for(var i = 0; i < m_Simulator.DistanceConstraintsCount;i ++){
                     var info = m_Simulator.GetDistanceConstraintInfo(i);
                     var fromPos = m_Simulator.Positions[info.VIndex0];
                     var toPos = m_Simulator.Positions[info.VIndex1];

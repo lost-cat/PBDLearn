@@ -59,6 +59,8 @@ namespace DefaultNamespace
             {
                 body.Mass = AttachBody.mass;
                 body.Velocity = AttachBody.velocity;
+                body.Restitution = 0.3f;
+                
             }
             group.AddSphere(Desc, body, EntityId);
         }
